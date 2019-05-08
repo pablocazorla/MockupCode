@@ -1,1 +1,26 @@
-/* STYLE.CSS */
+
+body{
+    background-color: #DDD;
+    font-family: 'Lato', sans-serif;
+    padding: 15px 25px;
+}
+canvas{
+    display: block;
+    background-color: #FFF;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+#dw{
+    display: inline-block;
+    text-decoration: none;
+    line-height: 2;
+    padding: 0 15px;
+    background-color: rgb(109, 144, 175);
+    font-weight: bold;
+    color: #FFF;
+    margin: 15px 0 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+#dw:hover{
+    opacity: .7;
+}

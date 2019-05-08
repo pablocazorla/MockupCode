@@ -2,13 +2,15 @@ var Mockup = function(options){
   "use strict";
 
   var cfg = Object.assign({
-    width:800,
-    height:600,
-    margin: 20,
+    width:950,
+    height:950,
+    margin: 30,
     gap:24,
     inputHeight:30,
     title: 'Mockup',
-    separator: '|',
+    separator: ',',
+    fontSize: 12,
+    fontSizeTitle: 30,
     list:[]
   },options);
 
@@ -17,8 +19,18 @@ var Mockup = function(options){
 
   var width = cfg.width,
     height = cfg.height,
-    margin = cfg.margin;
+    margin = cfg.margin,
+    labelHeight = 2 * cfg.fontSize,
+    inputHeight = cfg.inputHeight;
 
-  ctx.fillStyle = 'transparent';
+  canvas.width = width;
+  canvas.height = height;
+
+  var fillColor = '#000',
+    strokeColor = '#000',
+    placeColor = '#BBB';
+
+  ctx.fillStyle = '#F2F2F2';
   ctx.strokeStyle = '#000';
-  ctx.lineWidth = 2;
+  ctx.lineWidth = 2;  
+  ctx.font = cfg.fontSizeTitle + 'px Comic Sans MS';
