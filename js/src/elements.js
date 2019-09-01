@@ -278,6 +278,45 @@ var Element = function (str) {
         maxY = my;
       }
       break;
+    case 'date':
+      cy = y + labelHeight;
+      if (label) {
+        ctx.fillText(label + ':', x, cy - (labelHeight / 4));
+      }
+      drawRect(x, cy, col, inputHeight);
+      ctx.fillStyle = placeColor;
+      ctx.fillText('DD/MM/AAAA', x+10, cy + (labelHeight * 4/5));
+      var my = cy + inputHeight + gap;
+      if (my > maxY) {
+        maxY = my;
+      }
+      break;
+    case 'money':
+      cy = y + labelHeight;
+      if (label) {
+        ctx.fillText(label + ':', x, cy - (labelHeight / 4));
+      }
+      drawRect(x, cy, col, inputHeight);
+      ctx.fillStyle = placeColor;
+      ctx.fillText('0 €', x+10, cy + (labelHeight * 4/5));
+      var my = cy + inputHeight + gap;
+      if (my > maxY) {
+        maxY = my;
+      }
+      break;
+    case 'password':
+      cy = y + labelHeight;
+      if (label) {
+        ctx.fillText(label + ':', x, cy - (labelHeight / 4));
+      }
+      drawRect(x, cy, col, inputHeight);
+      ctx.fillStyle = placeColor;
+      ctx.fillText('******', x+10, cy + (labelHeight * 4/5));
+      var my = cy + inputHeight + gap;
+      if (my > maxY) {
+        maxY = my;
+      }
+      break;
    
     default:
       break;

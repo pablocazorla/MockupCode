@@ -18,11 +18,11 @@ var confluToMock = function (data) {
     list.push(s);
   });
   data.list = list;
-  console.log(list);
+ // console.log(list);
   return data;
 }
 
-var view = confluToMock(users);
+var view = confluToMock(prices);
 
 
 
